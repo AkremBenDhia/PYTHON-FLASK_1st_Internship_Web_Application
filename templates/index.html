@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="{{url_for('static', filename='steg.jpg')}}"  style="margin-left:40%;"/>
+
+
+    <div class="formulaire" style="text-align: center;margin-top:40px;" >
+        <form class="" action="data" method="post">
+
+            <label for="in1">Choisir fichier data_list</label>
+            <input type="file" id="in1" name="t1" value=""><br>
+            <br>
+            <br>
+            <label for="in2">Choisir fichier RTUTOP</label>
+            <input type="file" id="in2" name="t2" value=""><br>
+            <br>
+            <br>
+            <input type="submit" name="" value="Ok"><br>
+            <br>
+            <br>
+
+            <br><br>
+        </form>
+        <a href="{{url_for('download_file')}}">Download</a>
+    </div>
+<hr style="border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+
+<br><br> <br> <br> <br>
+
+
+
+    <div class="doublons"></div>
+        <table>
+            <label style="color:red"><b>Adresses dupliqué</b></label>
+                <tr>
+                    <th style="color:red">{{ data | safe }}<th>
+                </tr>
+        </table>
+    </div>
+</body>
+</html>
